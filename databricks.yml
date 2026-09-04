@@ -1,0 +1,19 @@
+bundle:
+  name: databricks_sales_capstone
+
+include:
+  - resources/*.yml
+
+targets:
+
+  dev:
+    default: true
+    mode: development
+
+    workspace:
+      host: ${var.databricks_host}
+
+variables:
+  databricks_host:
+    description: Databricks workspace URL
+    default: ${env.DATABRICKS_HOST}
