@@ -10,7 +10,7 @@ resources:
         - task_key: data_quality
 
           spark_python_task:
-            python_file: ../src/00_data_quality_report.py
+            python_file: ../src/00_data_quality_report.ipynb
 
           environment_key: default
 
@@ -20,7 +20,7 @@ resources:
             - task_key: data_quality
 
           spark_python_task:
-            python_file: ../src/01_bronze_ingestion.py
+            python_file: ../src/01_bronze_ingestion.ipynb
 
           environment_key: default
 
@@ -30,7 +30,7 @@ resources:
             - task_key: bronze_ingestion
 
           spark_python_task:
-            python_file: ../src/02_silver_cleaning.py
+            python_file: ../src/02_silver_cleaning.ipynb
 
           environment_key: default
 
@@ -40,7 +40,7 @@ resources:
             - task_key: silver_cleaning
 
           spark_python_task:
-            python_file: ../src/03_gold_analytics.py
+            python_file: ../src/03_gold_analytics.ipynb
 
           environment_key: default
 
